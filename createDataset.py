@@ -7,10 +7,10 @@ import cv2 as cv
 
 camera = cv.VideoCapture(0)
 
-count = 0
+count = 100
 countFrame = 0
 label = "not_ngtrdai"
-while count < 50:
+while count < 150:
     countFrame += 1
     ret, frame = camera.read()
     if not ret:
@@ -24,6 +24,6 @@ while count < 50:
         count += 1
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
-    
+
 camera.release()
 cv.destroyAllWindows()
